@@ -21,7 +21,7 @@ This is from the Danna repository. I am going to give you instructions and the n
 
 🔧 Script
 ```sh
-git clone https://github.com/danxnya/hypr.pro.git && cd hypr.danna/
+git clone https://github.com/danxnya/hypr.pro.git && cd hypr.pro/
 chmod +x setup.sh
 ./setup.sh
 ```
