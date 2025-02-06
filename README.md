@@ -26,12 +26,13 @@ chmod +x setup.sh
 ./setup.sh
 ```
 
-### Install necessary fonts and reboot.
-[Fonts here](https://mega.nz/file/GxFVSLLY#etuNc6QRrEl6wgl_ZatvomojDhkBTFPqlKS7ELk7KAM)
+
 ```sh
 mkdir ~/fonts/
 cd fonts/ && unzip fonts.zip
 ```
+### Install necessary fonts on ~/fonts and reboot.
+[Fonts here](https://mega.nz/file/GxFVSLLY#etuNc6QRrEl6wgl_ZatvomojDhkBTFPqlKS7ELk7KAM)
 
 ```sh
 sudo cp -r ~/fonts/* /usr/share/fonts/*
