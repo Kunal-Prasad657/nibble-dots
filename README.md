@@ -1,50 +1,80 @@
 # hypr.danna
-[![swappy-20241101-151144.png](https://i.postimg.cc/MGw6906G/swappy-20241101-151144.png)](https://postimg.cc/JsTCnkBw)
-## Information
 
-### Welcome! These are my dotfiles <33
-This is from the Danna repository. I am going to give you instructions and the necessary dependencies for my theme. ^^
+[![Demo GIF](https://i.postimg.cc/jqzQ4s6X/salida.gif)](https://postimg.cc/nMhDHfPj)
 
-### ‼️ Important !!
-- Not works in Nvdia (well, i don't try it xd).
-- The fonts will be installed in another steps.
-- Change the name of your monitor un the hyprland configs.
+## Introduction
 
-### 🍧 Information
+Welcome! These are my dotfiles for Hyprland on Arch Linux.  
+In this repository, you will find the configuration and scripts needed to install my theme.  
+> **Note**: I have not tested this configuration on systems with NVIDIA, so I cannot guarantee it will work there.
 
--  **OS** Arch Linux
--  **SH** zsh 5.9
--  **TM** kitty 0.35.2
--  **WM** Hyprland (Wayland)
+## Requirements
 
-## Steps for install
+1. **Hyprland** (Wayland)  
+2. **Arch Linux** (or Arch-based)  
+3. **Zsh** (version 5.9 or higher)  
+4. **Kitty** (version 0.35.2 or higher)  
+5. **Desktop Manager** (optional, I use `emptty`)
 
-🔧 Script
-```sh
-git clone https://github.com/danxnya/hypr.pro.git && cd hypr.pro/
+## Important Details
+
+- **Monitor Settings**: Make sure you replace your monitor name in the Hyprland configuration files.
+- **Fonts**: Some custom fonts are used in this configuration. They must be installed manually.
+
+## Installation Steps
+
+### 1. Clone the Repository and Run the Script
+
+```bash
+git clone https://github.com/danxnya/hypr.pro.git
+cd hypr.pro/
 chmod +x setup.sh
 ./setup.sh
 ```
 
+### 2. Install the Required Fonts
 
-```sh
-mkdir ~/fonts/
-cd fonts/ && unzip fonts.zip
-```
-### Install necessary fonts on ~/fonts and reboot.
-[Fonts here](https://mega.nz/file/GxFVSLLY#etuNc6QRrEl6wgl_ZatvomojDhkBTFPqlKS7ELk7KAM)
+   ```bash
+   mkdir ~/fonts/
+  ```
 
-```sh
-sudo cp -r ~/fonts/* /usr/share/fonts/*
-```
-Install your favorite desktop manager, I use `emptty`.
-```sh
+1. Download the fonts archive from the following link on ~/fonts :  
+   [Fonts (MEGA)](https://mega.nz/file/GxFVSLLY#etuNc6QRrEl6wgl_ZatvomojDhkBTFPqlKS7ELk7KAM)
+
+2. Unzip the **fonts.zip** into ~/fonts/ directory:
+
+   ```bash
+   cd ~/fonts/ 
+   unzip fonts.zip
+   ```
+
+3. Copy the fonts to the system directory (and optionally update your font cache):
+
+   ```bash
+   sudo cp -r ~/fonts/* /usr/share/fonts/
+   fc-cache -v
+   ```
+
+   > **Note**: You can also store fonts under `~/.local/share/fonts/` (or `~/.fonts/`) if you prefer per-user installations.
+
+### 3. (Optional) Install a Desktop Manager
+
+This setup can work with any display manager or login manager. If you want to use `emptty`:
+
+```bash
 sudo pacman -S emptty
-systemctl enable emptty.service
+sudo systemctl enable emptty.service
 ```
 
-Now, only wait and ENJOY. ><
+## Usage
 
+1. After rebooting, log in to the Wayland session with Hyprland.
+2. Make sure your monitor name is set correctly in the configuration (located at `~/.config/hypr/` or wherever you placed it).
+3. Enjoy your new customized environment!
 
-👤 Author
-danxnya
+## Author
+
+**notdanna**  
+[Original Repository](https://github.com/notdanna/hypr.pro)
+
+---
