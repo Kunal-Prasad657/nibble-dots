@@ -2,12 +2,16 @@
 # hypr.danna ✨(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
 
 ## Information
+
 <img src="https://github.com/notdanna/hypr.pro/blob/main/assets/ss.png?raw=true" width="100%">
 <img src="https://github.com/notdanna/hypr.pro/blob/main/assets/ss1.png?raw=true" width="100%">
 <img src="https://github.com/notdanna/hypr.pro/blob/main/assets/bar.gif?raw=true" width="100%">
+
 ## Introduction (o˘◡˘o)❀
+
 Welcome, fellow Arch Linux adventurer! These are my dotfiles for **Hyprland** on Arch Linux.  
 Here, you’ll find all the config files and scripts you need to get my custom theme up and running.  
+
 > **Note**: I haven’t tested this on systems with NVIDIA, so results may vary. (≧∇≦)ﾉ
 
 ## Requirements 🛠️
