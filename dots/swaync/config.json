@@ -1,40 +1,35 @@
 {
-  "$schema": "/etc/xdg/swaync/configSchema.json",
   "positionX": "right",
   "positionY": "top",
   "layer": "overlay",
-  "control-center-layer": "top",
-  "layer-shell": true,
+  "layer-shell": "true",
   "cssPriority": "application",
-  "control-center-margin-top": 20,
-  "control-center-margin-bottom": 20,
-  "control-center-margin-right": 20,
-  "control-center-margin-left": 0,
-  "notification-2fa-action": true,
-  "notification-inline-replies": true,
+  "control-center-margin-top": 8,
+  "control-center-margin-bottom": 8,
+  "control-center-margin-right": 8,
+  "control-center-margin-left": 8,
   "notification-icon-size": 64,
-  "notification-body-image-height": 100,
+  "notification-body-image-height": 128,
   "notification-body-image-width": 200,
-  "timeout": 5,
+  "timeout": 10,
   "timeout-low": 5,
-  "timeout-critical": 5,
-  "fit-to-screen": false,
-  "relative-timestamps": true,
+  "timeout-critical": 0,
+  "fit-to-screen": true,
   "control-center-width": 400,
-  "control-center-height": 800,
-  "notification-window-width": 400,
-  "notification-window-height": 800,
+  "control-center-height": 650,
+  "notification-window-width": 350,
   "keyboard-shortcuts": true,
   "image-visibility": "when-available",
   "transition-time": 200,
   "hide-on-clear": false,
   "hide-on-action": true,
   "script-fail-notify": true,
-  "scripts": {},
-  "notification-visibility": {},
   "widgets": [
-    "mpris",
     "title",
+    "menubar#desktop",
+    "volume",
+    "backlight#mobile",
+    "mpris",
     "dnd",
     "notifications"
   ],
@@ -42,14 +37,96 @@
     "title": {
       "text": "Notifications",
       "clear-all-button": true,
-      "button-text": "󰩺 Clear"
+      "button-text": " Clear All "
+    },
+    "menubar#desktop": {
+      "menu#powermode-buttons": {
+        "label": " 󰌪 ",
+        "position": "left",
+        "actions": [
+          {
+            "label": "Balanced",
+            "command": "powerprofilesctl set balanced"
+          },
+          {
+            "label": "Power-saver",
+            "command": "powerprofilesctl set power-saver"
+          }
+        ]
+      },
+      "menu#screenshot": {
+        "label": "  ",
+        "position": "left",
+        "actions": [
+          {
+            "label": "󰹑  Whole screen",
+            "command": "hyprshot -m output"
+          },
+          {
+            "label": "󰩭  Window / Region",
+            "command": "hyprshot -m region"
+          }
+        ]
+      },
+      "menu#record": {
+        "label": " 󰕧 ",
+        "position": "left",
+        "actions": [
+          {
+            "label": "  Record screen",
+            "command": "record screen & ; swaync-client -t"
+          },
+          {
+            "label": "  Record selection",
+            "command": "record area & ; swaync-client -t"
+          },
+          {
+            "label": "  Record GIF",
+            "command": "record gif & ; swaync-client -t"
+          },
+          {
+            "label": "󰻃  Stop",
+            "command": "record stop"
+          }
+        ]
+      },
+      "menu#power-buttons": {
+        "label": "  ",
+        "position": "left",
+        "actions": [
+          {
+            "label": "  Lock",
+            "command": "hyprlock"
+          },
+          {
+            "label": "  Reboot",
+            "command": "systemctl reboot"
+          },
+          {
+            "label": "  Shut down",
+            "command": "systemctl poweroff"
+          }
+        ]
+      }
+    },
+    "backlight#mobile": {
+      "label": " 󰃠 ",
+      "device": "amdgpu_bl1"
+    },
+    "volume": {
+      "label": "",
+      "expand-button-label": "",
+      "collapse-button-label": "",
+      "show-per-app": true,
+      "show-per-app-icon": true,
+      "show-per-app-label": false
     },
     "dnd": {
-      "text": "Do Not Disturb"
+      "text": " Do Not Disturb"
     },
     "mpris": {
-      "image-size": 96,
-      "image-radius": 12
+      "image-size": 85,
+      "image-radius": 5
     }
   }
 }

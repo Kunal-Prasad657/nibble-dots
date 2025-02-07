@@ -67,6 +67,8 @@ alias gp='git pull'
 alias gs='git status'
 alias ga='git add'
 alias gf='git fetch'
+alias nv='nvim'
+alias remove='sudo pacman -Rns $(pacman -Qtdq)'
 
 alias fetch='fastfetch -c /home/dam/.config/fastfetch/presets/nyarch.jsonc'
 

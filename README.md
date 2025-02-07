@@ -1,4 +1,14 @@
+<<<<<<< HEAD
 # hypr.danna ✨(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
+=======
+# hypr.danna
+<img src="https://github.com/notdanna/hypr.pro/blob/main/assets/ss.png?raw=true" width="50%" style="display: block; margin: auto;">
+<img src="https://github.com/notdanna/hypr.pro/blob/main/assets/ss1.png?raw=true" width="50%" style="display: block; margin: auto;">
+<img src="https://github.com/notdanna/hypr.pro/blob/main/assets/bar.gif?raw=true" width="50%" style="display: block; margin: auto;">
+
+
+## Information
+>>>>>>> d84818f (edits)
 
 [![Demo GIF](https://i.postimg.cc/jqzQ4s6X/salida.gif)](https://postimg.cc/nMhDHfPj)
 

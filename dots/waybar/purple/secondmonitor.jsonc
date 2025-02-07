@@ -2,25 +2,27 @@
     "output":"eDP-1",
     "layer": "top",
     "position": "top",
-    "margin": "5 5 0 5",
+    "margin": "0 0 0 0",
     "fixed-center": true,
     "reload_style_on_change": true,
     "include": ["~/.config/waybar/purple/modules.jsonc"],
     "modules-left": [
-      "hyprland/window",
+      "hyprland/window"
        //   "custom/playerlabel",
-      "group/info"
+      
     ],
     
     "modules-center": [
-  
-      "hyprland/workspaces"
+      "group/info",
+      "hyprland/workspaces",
+      "group/hub"
+      
     ],
   
     "modules-right": [
-      "group/control-center",
-      "group/hub"
-      // "group/power"
+      //"group/control-center",
+      "clock",
+      "group/power"
     ]
   }
   

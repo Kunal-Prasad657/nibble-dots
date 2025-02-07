@@ -19,9 +19,9 @@
     "orientation": "inherit",
     "drawer": {
       "transition-duration": 300,
-      "transition-left-to-right": false
+      "transition-right-to-left": true
     },
-    "modules": ["custom/arrow-right", "custom/playerlabel","cpu", "memory", "disk", "custom/updates"]
+    "modules": ["custom/arrow-left", "custom/playerlabel", "custom/updates"]
   },
   "custom/arrow-right": {
     "format": "󰁙",
@@ -42,7 +42,7 @@
     "format": "󱧕 {}",
     "tooltip": true,
     "interval": 43200, // 12 hours
-    "exec": "~/.config/waybar/scripts/check_updates.sh",
+    "exec": "~/.config/hypr/scripts/check_updates.sh",
     "return-type": "json"
   },
   "hyprland/workspaces": {
@@ -64,16 +64,9 @@
   },
   "group/control-center": {
     "orientation": "inherit",
-    "modules": ["tray", "group/audio", "group/connection"]
+    "modules": ["group/audio","group/connection"]
   },
-  "hyprland/language": {
-    "format": "{}",
-    "format-en": "en",
-    "format-ru": "ru",
-    "keyboard-name": "kingston-hyperx-alloy-fps-pro-mechanical-gaming-keyboard-1",
-    // "keyboard-name":"at-translated-set-2-keyboard",
-    "on-click": "hyprctl switchxkblayout kingston-hyperx-alloy-fps-pro-mechanical-gaming-keyboard-1 next"
-  },
+
   "group/audio": {
     "orientation": "inherit",
     "drawer": {
@@ -86,7 +79,7 @@
     ]
   },
   "pulseaudio": {
-    "format": "{volume}% {icon} ",
+    "format": "{volume}% {icon}",
     "format-bluetooth": "{icon}",
     "tooltip": false,
     // "tooltip-format": "{volume}% {icon} | {desc}",
@@ -129,7 +122,7 @@
     "modules": ["bluetooth", "bluetooth#status"]
   },
   "network": {
-    "format": "{icon}",
+    "format": "{icon} ",
     "format-icons": {
       "wifi": ["󰤨"],
       "ethernet": ["󰈁"],
@@ -178,7 +171,7 @@
   },
   "group/hub": {
     "orientation": "inherit",
-    "modules": ["group/utils", "clock"]
+    "modules": ["group/utils"]
   },
   "group/utils": {
     "orientation": "inherit",
@@ -186,7 +179,7 @@
       "transition-duration": 300,
       "transition-left-to-right": true
     },
-    "modules": ["custom/arrow-left", "custom/notifications", "custom/weather", "battery"]
+    "modules": ["custom/arrow-right","custom/notifications","custom/weather","tray","group/control-center"]
   },
   "custom/arrow-left": {
     "format": "󰁒",

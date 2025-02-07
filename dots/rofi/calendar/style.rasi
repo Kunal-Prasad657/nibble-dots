@@ -20,7 +20,7 @@ window {
     background-color:               @background;
     text-color:                     @foreground;
 	border:							2px;
-    border-radius:                  10px;
+    border-radius:                  0px;
     border-color:					@selected;
     width:                          384px;
     location:                       center;
