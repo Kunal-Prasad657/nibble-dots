@@ -1,8 +1,6 @@
 
 # hypr.danna ✨(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
 
-## Information
-
 <img src="https://github.com/notdanna/hypr.pro/blob/main/assets/ss.png?raw=true" width="100%">
 <img src="https://github.com/notdanna/hypr.pro/blob/main/assets/ss1.png?raw=true" width="100%">
 <img src="https://github.com/notdanna/hypr.pro/blob/main/assets/bar.gif?raw=true" width="100%">
