@@ -12,7 +12,8 @@ install_packages_yay=(
     kitty
     hyprland
     waybar
-    swappy
+    hyprshot
+    hyprpicker
     grim
     slurp
     nautilus
@@ -27,9 +28,8 @@ install_packages_yay=(
     wget
     unzip
     gtk3
-    w3m
     imagemagick
-    rustup
+    rust
     zen-browser-bin
     wf-recorder
     rofi
@@ -42,7 +42,11 @@ install_packages_yay=(
     rofi-calc
     rofimoji
     tmux
-    dunst
+    adwaita-colors-icon-theme
+    spicetify-cli
+    swaync-git
+    swaync-widgets-git
+    gnome-tweaks
 )
 
 # Installation log file
@@ -219,8 +223,22 @@ function copia() {
     cd zsh-sudo || exit 1
     sudo cp -r "$1/dots/sudo.plugin.zsh" /usr/share/zsh-sudo/
 
+
+
+    # ...existing code...
     # keyd configuration
-    sudo cp -r "$1/dots/default.conf" /etc/keyd/
+    read -rp 'Configure keyd? Will change the "ñ" to "-" (y,n)? ' KEYDANS
+    if [[ "$KEYDANS" =~ ^[Yy]$ ]]; then
+        sudo cp -r "$1/dots/default.conf" /etc/keyd/
+    fi
+    # ...existing code...
+
+    # spiceify configuration
+    spicetify config current_theme catppuccin
+    spicetify config color_scheme mocha
+    spicetify config inject_css 1 inject_theme_js 1 replace_colors 1 overwrite_assets 1
+    spicetify apply
+
 
     echo -en "\e[32mOK\e[0m\n"
 }
