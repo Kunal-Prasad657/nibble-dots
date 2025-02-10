@@ -73,20 +73,16 @@
         "position": "left",
         "actions": [
           {
-            "label": "  Record screen",
-            "command": "record screen & ; swaync-client -t"
-          },
-          {
-            "label": "  Record selection",
-            "command": "record area & ; swaync-client -t"
+            "label": " Record",
+            "command": "bash /home/dam/.config/hypr/scripts/record.sh section &"
           },
           {
             "label": "  Record GIF",
-            "command": "record gif & ; swaync-client -t"
+            "command": "notify-send 'not implemented yet heh'"
           },
           {
             "label": "󰻃  Stop",
-            "command": "record stop"
+            "command": "bash /home/dam/.config/hypr/scripts/record.sh stop &"
           }
         ]
       },

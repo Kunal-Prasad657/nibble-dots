@@ -67,6 +67,62 @@
     "modules": ["group/audio","group/connection"]
   },
 
+
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 20,
+    "all-outputs": true,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": [
+        "wofi",
+        "rofi",
+        "swaylock"
+    ]
+},
+
+"group/apps": {
+  "orientation": "inherit",
+  "drawer": {
+    "transition-duration": 300,
+    "transition-left-to-right": true
+  },
+  "modules": ["custom/arrow-right","wlr/taskbar", "cpu", "memory", "disk"]
+},
+
+
+  "custom/record": {
+    "format": "",
+    "tooltip": true,
+    "tooltip-format": "Record Screen",
+    "on-click": "bash ~/.config/hypr/scripts/record.sh fullscreen"
+  },
+
+  "custom/stop": {
+    "format": "󰻃",
+    "tooltip": true,
+    "tooltip-format": "Stop Recording",
+    "on-click": "bash ~/.config/hypr/scripts/record.sh stop"
+  },
+
+  "custom/section": {
+    "format": "",
+    "tooltip": true,
+    "tooltip-format": "Record Section",
+    "on-click": "bash ~/.config/hypr/scripts/record.sh section"
+  },
+
+  "group/video": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 300,
+      "transition-left-to-right": false
+    },
+    "modules": ["custom/arrow-left","custom/record", "custom/section", "custom/stop","group/control-center"]
+  },
+
+
   "group/audio": {
     "orientation": "inherit",
     "drawer": {
@@ -102,15 +158,15 @@
   
   "group/connection": {
     "orientation": "inherit",
-    "modules": ["group/network", "group/bluetooth"]
+    "modules": ["group/bluetooth","group/network"]
   },
   "group/network": {
     "orientation": "inherit",
     "drawer": {
-      "transition-duration": 300,
+      "transition-duration": 10000,
       "transition-left-to-right": true
     },
-    "modules": ["network", "network#speed"]
+    "modules": ["network"]
 
   },
   "group/bluetooth": {
@@ -132,7 +188,12 @@
     "format-ethernet": "󰈁",
     "format-disconnected": "󰖪",
     "format-linked": "󰈁",
-    "tooltip": false,
+    "interval": 5,
+    "tooltip-format": "{ipaddr}",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)   \n{ipaddr} | {frequency} MHz{icon} ",
+    "tooltip-format-ethernet": "{ifname} 󰈀 \n{ipaddr} | {frequency} MHz{icon} ",
+    "tooltip-format-disconnected": "Not Connected to any type of Network",
+    "tooltip": true,
     "on-click": "python ~/.config/rofi/network/network.py"
   },
   "network#speed": {
@@ -179,7 +240,7 @@
       "transition-duration": 300,
       "transition-left-to-right": true
     },
-    "modules": ["custom/arrow-right","custom/notifications","custom/weather","tray","group/control-center"]
+    "modules": ["custom/arrow-right","custom/notifications","custom/weather","tray"]
   },
   "custom/arrow-left": {
     "format": "󰁒",
@@ -295,8 +356,7 @@
     "tooltip": true,
     "format-icons": {
       "default": "",
-      "performance": "<span color='#B37F34'><small></small></span>",
-      "balanced": "<span><small> </small></span>",
+      "balanced": "<span><small></small></span>",
       "power-saver": "<span color='#a6e3a1'><small></small></span>"
     }
   }

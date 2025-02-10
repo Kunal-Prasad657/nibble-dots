@@ -34,7 +34,7 @@ tooltip label {
 }
 
 #custom-arrow-right {
-  color: lighter(@main-color);
+  color: alpha(lighter(@main-color),0.8);
   margin: 0px 4px;
   margin: 0px 2px 4px 4px;
 
@@ -43,6 +43,9 @@ tooltip label {
 #cpu,
 #memory,
 #disk,
+#custom-record,
+#custom-stop,
+#custom-section,
 #custom-updates {
   padding: 0px 6px;
   margin: 8px 4px;
@@ -57,21 +60,27 @@ tooltip label {
   border-radius: 10px;
 }
 
+
 #workspaces button {
   padding: 0px 4px;
   margin: 0px 4px;
   color: alpha(@foreground, 0.3);
+
 }
 
 #workspaces button.active {
   transition: color 0.5s;
   color: @main-color;
+  background: alpha(darker(@main-color), 0.2);
+  border-radius: 10px;
+  margin: 0px 0px;
 }
 
 #workspaces button.urgent,
 #workspaces button:hover {
   color: @color5;
-  background-color: @background;
+  background: alpha(darker(@main-color), 0.3);
+  border-radius: 10px;
 }
 
 #control-center {
@@ -82,7 +91,6 @@ tooltip label {
   border-radius: 10px;
 }
 
-#bluetooth,
 #network,
 #pulseaudio {
   padding: 0px 0 0 4px;
@@ -111,7 +119,7 @@ tooltip label {
 }
 
 #custom-arrow-left {
-  color: lighter(@main-color);
+  color: alpha(lighter(@main-color),0.8);
   margin: 0px 4px;
   margin: 0px 2px 4px 4px;
 
@@ -141,13 +149,21 @@ tooltip label {
   background: alpha(@main-color, 0);
   color: @main-color;
   border-radius: 10px;
-  margin: 0px 7px 0px 0px;
+  margin: 0px 5px 0px 0px;
 
+}
+
+#power-profiles-daemon {
+  padding: 0px 8px;
+  margin: 8px 0px 8px 4px;
+  color: @main-color;
+  background: alpha(darker(@main-color), 0.3);
+  border-radius: 10px;
 }
 
 #battery {
   padding: 0px 8px;
-  margin: 0px 2px 4px 4px;
+  margin: 0px 2px 4px 2px;
 }
 
 
@@ -158,6 +174,37 @@ tooltip label {
   background: alpha(@main-color, 0.8);
   border-radius: 10px;
 }
+
+
+#taskbar {
+  padding: 0px 8px;
+  margin: 0px 5px;
+  background: alpha(darker(@main-color), 0);
+  border-radius: 10px;
+  color: lighter(@main-color);
+}
+
+#taskbar button:hover {
+  color: @main-color;
+  background: alpha(darker(@main-color), 0.2);
+  border-radius: 10px;
+}
+
+#taskbar button.active {
+  color: @main-color;
+  background: alpha(darker(@main-color), 0.3);
+  border-radius: 10px;
+}
+
+#bluetooth {
+  margin: 0px 5px 0px 7px;
+  color: @foreground;
+}
+
+
+
+
+
 
 /*
 .modules-left {

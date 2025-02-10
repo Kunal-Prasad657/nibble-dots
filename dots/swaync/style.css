@@ -589,7 +589,7 @@ scale trough {
 
 scale highlight {
     border-radius: 5px;
-    min-height: 10px;
+    min-height: 6px;
     margin-right: -5px;
     background: @green;
     border: 1px solid @green;
@@ -600,7 +600,7 @@ scale slider {
     min-width: 10px;
     min-height: 10px;
     background: #FA90BB;
-    border: 1px solid #FA90BB;
+    border: 0px solid #FA90BB;
     box-shadow: none;
     padding: 0px;
 }
