@@ -30,7 +30,7 @@ Here, you’ll find all the config files and scripts you need to get my custom t
 ### 1. Clone the Repository and Run the Script
 
 ```bash
-git clone https://github.com/danxnya/hypr.pro.git
+git clone https://github.com/notdanna/hypr.pro.git
 cd hypr.pro/
 chmod +x setup.sh
 ./setup.sh
