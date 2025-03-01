@@ -1,7 +1,7 @@
 
 # hypr.danna ✨(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
 
-<img src="https://github.com/notdanna/hypr.pro/blob/main/assets/bar.gif?raw=true" width="100%">
+<img src="https://github.com/notdanna/hypr.pro/blob/main/assets/Video12.gif?raw=true" width="100%">
 <img src="https://github.com/notdanna/hypr.pro/blob/main/assets/ss.png?raw=true" width="100%">
 <img src="https://github.com/notdanna/hypr.pro/blob/main/assets/apps.png?raw=true" width="100%">
 <img src="https://github.com/notdanna/hypr.pro/blob/main/assets/noti.png?raw=true" width="100%">
