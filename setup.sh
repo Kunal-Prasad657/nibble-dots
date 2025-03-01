@@ -49,6 +49,7 @@ install_packages_yay=(
     gnome-tweaks
     python-pywal
     matugen-bin
+    mpv
 )
 
 # Installation log file
