@@ -13,8 +13,8 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-@import                          "colors.rasi"
-@import                          "fonts.rasi"
+@import                          "./matugen/matugen-rofi.rasi"
+@import                          "./fonts.rasi"
 
 /*
 USE_BUTTONS=YES
@@ -36,7 +36,7 @@ window {
     margin:                      0px;
     padding:                     0px;
     border:                      2px solid;
-    border-radius:               0px;
+    border-radius:               24px;
     border-color:                @selected;
     cursor:                      "default";
     background-color:            @background;
@@ -49,7 +49,7 @@ mainbox {
     margin:                      0px;
     padding:                     30px;
     border:                      0px solid;
-    border-radius:               0px;
+    border-radius:               24px;
     border-color:                @selected;
     background-color:            transparent;
     children:                    [ "message", "listview" ];

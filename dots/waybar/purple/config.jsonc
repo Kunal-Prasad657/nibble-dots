@@ -9,8 +9,6 @@
     "modules-left": [
       "hyprland/window",
       "group/apps"
-
-       //   "custom/playerlabel",
       
     ],
     

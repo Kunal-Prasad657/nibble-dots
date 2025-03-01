@@ -240,7 +240,7 @@
       "transition-duration": 300,
       "transition-left-to-right": true
     },
-    "modules": ["custom/arrow-right","custom/notifications","custom/weather","tray"]
+    "modules": ["custom/arrow-right","custom/notifications","tray","custom/weather"]
   },
   "custom/arrow-left": {
     "format": "󰁒",

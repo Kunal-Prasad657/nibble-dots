@@ -12,7 +12,7 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-@import                          "./colors.rasi"
+@import                          "./matugen/matugen-rofi.rasi"
 @import                          "./fonts.rasi"
 
 
@@ -58,7 +58,7 @@ window {
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               0px;
+    border-radius:               24px;
     border-color:                @border-colour;
     cursor:                      "default";
     /* Backgroud Colors */
@@ -81,7 +81,7 @@ mainbox {
     margin:                      0px;
     padding:                     30px;
     border:                      2px solid;
-    border-radius:               0px;
+    border-radius:               24px;
     border-color:                @border-colour;
     background-color:            transparent;
     children:                    [ "inputbar", "message", "listview" ];

@@ -21,8 +21,8 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-@import                          "colors.rasi"
-@import                          "fonts.rasi"
+@import                          "./matugen/matugen-rofi.rasi"
+@import                          "./fonts.rasi"
 
 * {
     border-colour:               var(selected);
@@ -67,7 +67,7 @@ window {
     margin:                      0px;
     padding:                     0px;
     border:                      2px solid;
-    border-radius:               0px;
+    border-radius:               24px;
     border-color:                @border-colour;
     cursor:                      "default";
     /* Backgroud Colors */

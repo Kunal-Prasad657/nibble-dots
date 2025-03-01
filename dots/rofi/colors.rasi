@@ -5,8 +5,8 @@
     background:     #0B0A10;
     background-alt: #0B0A10;
     foreground:     #e0def4;
-    selected:       #FA90BB;
-    active:         #FA90BB;
+    selected:       #C699BB;
+    active:         #C699BB;
     urgent:         #e0def4;
 }
 

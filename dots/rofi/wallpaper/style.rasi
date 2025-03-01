@@ -20,8 +20,8 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-@import                          "colors.rasi"
-@import                          "fonts.rasi"
+@import                          "./matugen/matugen-rofi.rasi"
+@import                          "./fonts.rasi"
 
 * {
     border-colour:               var(selected);
@@ -56,7 +56,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       550px;
+    width:                       750px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -65,7 +65,7 @@ window {
     margin:                      0px;
     padding:                     0px;
     border:                      2px solid;
-    border-radius:               0px;
+    border-radius:               24px;
     border-color:                @border-colour;
     cursor:                      "default";
     /* Backgroud Colors */
@@ -87,7 +87,7 @@ mainbox {
     margin:                      0px;
     padding:                     30px;
     border:                      0px solid;
-    border-radius:               0px 0px 0px 0px;
+    border-radius:               0px;
     border-color:                @border-colour;
     background-color:            transparent;
     children:                    [ "inputbar", "listview", "mode-switcher" ];
@@ -155,7 +155,7 @@ case-indicator {
 /*****----- Listview -----*****/
 listview {
     enabled:                     true;
-    columns:                     3;
+    columns:                     5;
     lines:                       10;
     cycle:                       true;
     dynamic:                     true;

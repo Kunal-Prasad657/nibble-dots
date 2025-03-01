@@ -12,8 +12,8 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-@import "colors.rasi"
-@import "fonts.rasi"
+@import                          "./matugen/matugen-rofi.rasi"
+@import                          "./fonts.rasi"
 
 /*
 USE_BUTTONS=YES

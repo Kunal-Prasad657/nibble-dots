@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/dam/wallpapers/green-girl.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#12100d",
+        "foreground": "#e7e4e2",
+        "cursor": "#e7e4e2"
+    },
+    "colors": {
+        "color0": "#12100d",
+        "color1": "#75A98D",
+        "color2": "#ADA0A0",
+        "color3": "#CBB19E",
+        "color4": "#86D69B",
+        "color5": "#91E1A2",
+        "color6": "#E2D2A2",
+        "color7": "#e7e4e2",
+        "color8": "#a19f9e",
+        "color9": "#75A98D",
+        "color10": "#ADA0A0",
+        "color11": "#CBB19E",
+        "color12": "#86D69B",
+        "color13": "#91E1A2",
+        "color14": "#E2D2A2",
+        "color15": "#e7e4e2"
+    }
+}

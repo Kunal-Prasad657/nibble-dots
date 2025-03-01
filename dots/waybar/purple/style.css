@@ -1,6 +1,4 @@
-@import "colors.css";
-
-@define-color main-color @color13;
+@import "../matugen/matugen-waybar.css";
 
 * {
   font: bold 13px "JetBrainsMono Nerd Font Propo";
@@ -11,8 +9,8 @@
 }
 
 window#waybar {
-  background: alpha(@background, 1);
-  border-bottom: 0px solid alpha(@main-color, 0.5);
+  background: alpha(black, 1);
+  border-bottom: 0px solid alpha(@on_surface, 0.5);
 }
 
 #window {
@@ -24,8 +22,9 @@ window#waybar {
 }
 
 tooltip {
-  background: alpha(@background, 0.8);
-  border: 2px solid alpha(lighter(@main-color), 0.3);
+  color: @on_tertiary_container;
+  background: alpha(@surface_container_lowest, 0.8);
+  border: 2px solid alpha(@primary_fixed_dim, 1);
   border-radius: 10px;
 }
 
@@ -34,7 +33,7 @@ tooltip label {
 }
 
 #custom-arrow-right {
-  color: alpha(lighter(@main-color),0.8);
+  color: alpha(@on_surface,1);
   margin: 0px 4px;
   margin: 0px 2px 4px 4px;
 
@@ -43,20 +42,46 @@ tooltip label {
 #cpu,
 #memory,
 #disk,
-#custom-record,
-#custom-stop,
-#custom-section,
 #custom-updates {
   padding: 0px 6px;
   margin: 8px 4px;
-  background: alpha(darker(@main-color), 0.3);
-  color: @main-color;
+  color: @on_tertiary_container;
+  background: alpha(@tertiary_container, 0.8);
   border-radius: 10px;
 }
 
+
+
+#custom-section {
+  padding: 0px 6px;
+  margin: 8px 0px;
+  color: @on_tertiary_container;
+  background: alpha(@tertiary_container, 0.8);
+  border-radius: 0px 0px 0px 0px;
+}
+
+
+#custom-stop {
+  padding: 0px 6px;
+  margin: 8px 0px;
+  color: @on_tertiary_container;
+  background: alpha(@tertiary_container, 0.8);
+  border-radius: 0px 10px 10px 0px;
+}
+
+#custom-record {
+  padding: 0px 6px;
+  margin: 8px 0px;
+  color: @on_tertiary_container;
+  background: alpha(@tertiary_container, 0.8);
+  border-radius: 10px 0px 0px 10px;
+}
+
+
 #workspaces {
   margin: 4px 2px 6px 4px;
-  background: alpha(#201a27, 1);
+  background: alpha(@surface_container_high, 1);
+  color: alpha(@on_secondary_container, 1);
   border-radius: 10px;
 }
 
@@ -64,36 +89,40 @@ tooltip label {
 #workspaces button {
   padding: 0px 4px;
   margin: 0px 4px;
-  color: alpha(@foreground, 0.3);
+  color: alpha(@on_secondary_container, 0.5);
 
 }
 
 #workspaces button.active {
-  transition: color 0.5s;
-  color: @main-color;
-  background: alpha(darker(@main-color), 0.2);
-  border-radius: 10px;
+  color: alpha(@surface_container_high, 1);
+  background: alpha(@primary, 0.7);
+  border-radius: 9px;
   margin: 0px 0px;
 }
 
 #workspaces button.urgent,
 #workspaces button:hover {
-  color: @color5;
-  background: alpha(darker(@main-color), 0.3);
+  color: alpha(@primary, 1);
+  background: alpha(@background, 0.5);
   border-radius: 10px;
 }
+
+
 
 #control-center {
   padding: 0px 8px;
   margin: 8px 4px;
-  color: lighter(@main-color);
-  background: alpha(@background, 15);
+  color: alpha(@primary, 1);
+  background: alpha(@surface_container_highest, 1);
   border-radius: 10px;
 }
 
 #network,
+#bluetooth,
 #pulseaudio {
   padding: 0px 0 0 4px;
+  color: alpha(@primary, 1);
+  background: alpha(@surface_container_highest, 1);
 }
 
 #pulseaudio-slider slider {
@@ -113,8 +142,8 @@ tooltip label {
   background-color: transparent;
 }
 
-#tray {
-  padding: 0px 0px 0px 10px;
+#custom-weather {
+  padding: 0px 0px 0px 4px;
   background-color: transparent;
 }
 
@@ -126,12 +155,12 @@ tooltip label {
 }
 
 #custom-notifications,
-#custom-weather,
+#tray,
 #custom-theme-switcher {
   padding: 0px 8px;
   margin: 6px 4px;
-  color: @main-color;
-  background: alpha(darker(@main-color), 0.3);
+  color: @on_tertiary_container;
+  background: alpha(@tertiary_container, 0.8);
   border-radius: 10px;
 }
 
@@ -147,7 +176,7 @@ tooltip label {
 
 #power {
   background: alpha(@main-color, 0);
-  color: @main-color;
+  color: @on_surface;
   border-radius: 10px;
   margin: 0px 5px 0px 0px;
 
@@ -156,8 +185,8 @@ tooltip label {
 #power-profiles-daemon {
   padding: 0px 8px;
   margin: 8px 0px 8px 4px;
-  color: @main-color;
-  background: alpha(darker(@main-color), 0.3);
+  color: @on_tertiary_container;
+  background: alpha(@tertiary_container, 0.8);
   border-radius: 10px;
 }
 
@@ -170,8 +199,8 @@ tooltip label {
 #custom-playerlabel {
   padding: 0px 8px;
   margin: 8px 4px;
-  color: @background;
-  background: alpha(@main-color, 0.8);
+  color: @on_tertiary_container;
+  background: alpha(@tertiary_container, 0.8);
   border-radius: 10px;
 }
 
@@ -179,26 +208,25 @@ tooltip label {
 #taskbar {
   padding: 0px 8px;
   margin: 0px 5px;
-  background: alpha(darker(@main-color), 0);
+  color: @on_tertiary_container;
+  background: alpha(@tertiary_container, 0);
   border-radius: 10px;
-  color: lighter(@main-color);
 }
 
 #taskbar button:hover {
-  color: @main-color;
-  background: alpha(darker(@main-color), 0.2);
+  color: @on_tertiary_container;
+  background: alpha(@tertiary_container, 0.8);
   border-radius: 10px;
 }
 
 #taskbar button.active {
-  color: @main-color;
-  background: alpha(darker(@main-color), 0.3);
+  color: @on_tertiary_container;
+  background: alpha(@tertiary_container, 0);
   border-radius: 10px;
 }
 
 #bluetooth {
   margin: 0px 5px 0px 7px;
-  color: @foreground;
 }
 
 

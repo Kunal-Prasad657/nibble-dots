@@ -1,0 +1,21 @@
+set $wallpaper /home/dam/wallpapers/green-girl.jpg
+
+set $background #12100d
+set $foreground #e7e4e2
+
+set $color0 #12100d
+set $color1 #75A98D
+set $color2 #ADA0A0
+set $color3 #CBB19E
+set $color4 #86D69B
+set $color5 #91E1A2
+set $color6 #E2D2A2
+set $color7 #e7e4e2
+set $color8 #a19f9e
+set $color9 #75A98D
+set $color10 #ADA0A0
+set $color11 #CBB19E
+set $color12 #86D69B
+set $color13 #91E1A2
+set $color14 #E2D2A2
+set $color15 #e7e4e2
