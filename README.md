@@ -1,9 +1,12 @@
 
 # hypr.danna ✨(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
 
-<img src="https://github.com/notdanna/hypr.pro/blob/main/assets/ss.png?raw=true" width="100%">
-<img src="https://github.com/notdanna/hypr.pro/blob/main/assets/ss1.png?raw=true" width="100%">
 <img src="https://github.com/notdanna/hypr.pro/blob/main/assets/bar.gif?raw=true" width="100%">
+<img src="https://github.com/notdanna/hypr.pro/blob/main/assets/ss.png?raw=true" width="100%">
+<img src="https://github.com/notdanna/hypr.pro/blob/main/assets/apps.png?raw=true" width="100%">
+<img src="https://github.com/notdanna/hypr.pro/blob/main/assets/noti.png?raw=true" width="100%">
+<img src="https://github.com/notdanna/hypr.pro/blob/main/assets/fetch.png?raw=true" width="100%">
+
 
 ## Introduction (o˘◡˘o)❀
 
@@ -65,6 +68,126 @@ sudo systemctl enable emptty.service
 1. Reboot and log in to the **Wayland** session with **Hyprland**.  
 2. Make sure your monitor name is correctly set in the Hyprland configs (usually under `~/.config/hypr/`).  
 3. Enjoy your cozy new environment! ✨
+
+
+---
+
+# 📜 Hyprland Keybinds
+
+### 🖱️ Mouse Actions
+| Key Combination | Action |
+|----------------|--------|
+| `SUPER + Left Click` | Move window |
+| `SUPER + Right Click` | Resize window |
+
+### 🖥️ Window Management
+| Key Combination | Action |
+|----------------|--------|
+| `SUPER + Q` | Kill active window |
+| `SUPER + SHIFT + F` | Toggle fullscreen |
+| `SUPER + P` | Toggle pseudo mode |
+| `SUPER + S` | Toggle floating mode |
+
+### 📂 Applications & System
+| Key Combination | Action |
+|----------------|--------|
+| `SUPER + RETURN` | Launch `kitty` terminal |
+| `SUPER + A` | Open Rofi (`drun`) |
+| `SUPER + E` | Open file manager (`$fileManager`) |
+| `SUPER + ESCAPE` | Suspend system (`systemctl suspend`) |
+| `SUPER + SHIFT + Q` | Exit Hyprland |
+
+### 🎨 Theming & Wallpapers
+| Key Combination | Action |
+|----------------|--------|
+| `SUPER + SHIFT + W` | Execute `swww.sh` (wallpaper script) |
+| `SUPER + SHIFT + O` | Execute `hyprswitch.sh` |
+
+### 📝 Scripts & Utilities
+| Key Combination | Action |
+|----------------|--------|
+| `SUPER + V` | Open clipboard manager (`cliphist.sh`) |
+| `SUPER + PERIOD` | Open emoji picker (`emoji.sh`) |
+| `SUPER + T` | Open Tmux session (`tmux.sh`) |
+| `SUPER + N` | Open notes script (`notes.sh`) |
+| `SUPER + SHIFT + T` | Open ToDo list (`todo.sh`) |
+| `SUPER + MOD + I` | Open calendar (`calendar.sh`) |
+| `SUPER + MOD + ,` | Open wallpaper manager (`wallpaper.sh`) |
+| `SUPER + MOD + N` | Open network manager (`network.py`) |
+
+### 🖥️ Waydroid Management
+| Key Combination | Action |
+|----------------|--------|
+| `SUPER + K` | Start Waydroid session |
+| `SUPER + SHIFT + L` | Stop Waydroid session |
+
+### 🎥 Screenshots & Recording
+| Key Combination | Action |
+|----------------|--------|
+| `SUPER + SHIFT + S` | Take a region screenshot (`hyprshot -m region`) |
+| `SUPER + SHIFT + A` | Take a window screenshot (`hyprshot -m window`) |
+| `SUPER + R` | Start screen recording (`wf-recorder`) |
+| `SUPER + SHIFT + R` | Stop screen recording (`pkill wf-recorder`) |
+| `SUPER + SHIFT + P` | Pick color from screen (`hyprpicker -a`) |
+
+### 🔊 Audio & Media Controls
+| Key Combination | Action |
+|----------------|--------|
+| `XF86AudioPlay` | Play/Pause media (`playerctl play-pause`) |
+| `XF86AudioPrev` | Previous track (`playerctl previous`) |
+| `XF86AudioNext` | Next track (`playerctl next`) |
+| `XF86AudioMedia` | Play/Pause media |
+| `XF86AudioStop` | Stop media |
+
+### 🔀 Window Navigation
+| Key Combination | Action |
+|----------------|--------|
+| `SUPER + J` | Move focus down |
+| `SUPER + K` | Move focus up |
+| `SUPER + H` | Move focus left |
+| `SUPER + L` | Move focus right |
+
+### ↔️ Resize Windows
+| Key Combination | Action |
+|----------------|--------|
+| `SUPER + LEFT` | Decrease width |
+| `SUPER + RIGHT` | Increase width |
+| `SUPER + UP` | Decrease height |
+| `SUPER + DOWN` | Increase height |
+
+### 📦 Move Windows
+| Key Combination | Action |
+|----------------|--------|
+| `SUPER + SHIFT + H` | Move window left |
+| `SUPER + SHIFT + L` | Move window right |
+| `SUPER + SHIFT + K` | Move window up |
+| `SUPER + SHIFT + J` | Move window down |
+
+### 🔢 Workspaces
+| Key Combination | Action |
+|----------------|--------|
+| `SUPER + 1` | Switch to workspace 1 |
+| `SUPER + 2` | Switch to workspace 2 |
+| `SUPER + 3` | Switch to workspace 3 |
+| `ALT + Q` | Switch to workspace 4 |
+| `ALT + W` | Switch to workspace 5 |
+| `ALT + E` | Switch to workspace 6 |
+| `SUPER + 4` | Switch to workspace 7 |
+| `SUPER + 5` | Switch to workspace 8 |
+| `SUPER + 6` | Switch to workspace 9 |
+| `SUPER + 7` | Switch to workspace 0 |
+
+### 🚀 Move Windows to Workspaces
+| Key Combination | Action |
+|----------------|--------|
+| `SUPER + SHIFT + 1` | Move window to workspace 1 |
+| `SUPER + SHIFT + 2` | Move window to workspace 2 |
+| `SUPER + SHIFT + 3` | Move window to workspace 3 |
+| `SUPER + SHIFT + 4` | Move window to workspace 4 |
+| `SUPER + SHIFT + 5` | Move window to workspace 5 |
+| `SUPER + SHIFT + 6` | Move window to workspace 6 |
+
+
 
 ---
 
