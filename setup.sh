@@ -47,6 +47,8 @@ install_packages_yay=(
     swaync-git
     swaync-widgets-git
     gnome-tweaks
+    python-pywal
+    matugen-bin
 )
 
 # Installation log file
