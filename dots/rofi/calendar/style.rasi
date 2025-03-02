@@ -20,13 +20,13 @@ window {
     background-color:               @background;
     text-color:                     @foreground;
 	border:							2px;
-    border-radius:                  24px;
+    border-radius:                  0px;
     border-color:					@selected;
     width:                          384px;
-    location:                       center;
-    anchor:                         center;
+    location:                       north;
+    anchor:                         north;
     x-offset:                       0;
-    y-offset:                       0;
+    y-offset:                       55;
 }
 
 prompt {

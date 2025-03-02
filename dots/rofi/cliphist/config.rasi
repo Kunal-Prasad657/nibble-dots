@@ -53,10 +53,10 @@ window {
     background-color:            @background;
     border:                      2px;
     border-color:				 @selected;
-    border-radius:               24px;
+    border-radius:               0px;
     border-color:                @border-color;
-    width:                       70%;
-    height:                      70%;
+    width:                       50%;
+    height:                      50%;
     margin:                      0px;
     padding:                     0px;
 }
@@ -110,7 +110,7 @@ entry {
     border-radius:               12px;
     background-color:            @alternate-background;
     text-color:                  @foreground;
-    padding:                     16px;
+    padding:                     10px;
     margin:                      0px;
 }
 
@@ -182,19 +182,19 @@ element normal.active {
 element selected.normal {
     background-color:            inherit;
     text-color:                  @selected;
-    border:                      0px 3px 0px 3px;
+    border:                      2px;
     border-color:                @border-color;
 }
 element selected.urgent {
     background-color:            inherit;
     text-color:                  @urgent;
-    border:                      0px 3px 0px 3px;
+    border:                      2px;
     border-color:                @urgent;
 }
 element selected.active {
     background-color:            inherit;
     text-color:                  @active;
-    border:                      0px 3px 0px 3px;
+    border:                      2px;
     border-color:                @active;
 }
 element alternate.normal {

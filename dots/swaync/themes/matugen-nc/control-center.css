@@ -34,8 +34,8 @@
 /* CONTROL CENTER ------------------------------------------------------------------------ */
 
 .control-center {
-  background: @background;
-  border-radius: 24px;
+  background: @surface_container_lowest;
+  border-radius: 0px;
   border: 2px solid @selected;
   box-shadow: 0 0 10px 0 rgba(0,0,0,.6);
   margin: 18px;
@@ -47,7 +47,7 @@
 .control-center .notification-row .notification-background .notification.critical {
   background-color: alpha(@primary, 0.8);
   color: @on_primary;
-  border: 2px solid @background;
+  border: 2px solid @surface_container_lowest;
   border-radius: 16px;
   margin: 4px 0px;
   padding: 4px;

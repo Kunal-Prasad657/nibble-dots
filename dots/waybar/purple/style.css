@@ -95,7 +95,7 @@ tooltip label {
 
 #workspaces button.active {
   color: alpha(@surface_container_high, 1);
-  background: alpha(@primary, 0.7);
+  background: alpha(@primary, 0.8);
   border-radius: 9px;
   margin: 0px 0px;
 }
@@ -230,7 +230,13 @@ tooltip label {
 }
 
 
-
+#custom-cava {
+  padding: 0px 8px;
+  margin: 8px 4px;
+  color: @on_tertiary_container;
+  background: alpha(@tertiary_container, 0.8);
+  border-radius: 10px;
+}
 
 
 

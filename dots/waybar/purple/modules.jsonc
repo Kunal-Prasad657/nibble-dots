@@ -21,7 +21,7 @@
       "transition-duration": 300,
       "transition-right-to-left": true
     },
-    "modules": ["custom/arrow-left", "custom/playerlabel", "custom/updates"]
+    "modules": ["custom/arrow-left", "custom/playerlabel","group/music", "custom/updates"]
   },
   "custom/arrow-right": {
     "format": "󰁙",
@@ -119,7 +119,7 @@
       "transition-duration": 300,
       "transition-left-to-right": false
     },
-    "modules": ["custom/arrow-left","custom/record", "custom/section", "custom/stop","group/control-center"]
+    "modules": ["custom/arrow-left","custom/record", "custom/section", "custom/stop", "group/control-center"]
   },
 
 
@@ -240,7 +240,7 @@
       "transition-duration": 300,
       "transition-left-to-right": true
     },
-    "modules": ["custom/arrow-right","custom/notifications","tray","custom/weather"]
+    "modules": ["custom/arrow-right","tray","custom/notifications","custom/weather"]
   },
   "custom/arrow-left": {
     "format": "󰁒",
@@ -336,12 +336,32 @@
     "format": "{}",
     "return-type": "json",
     "max-length": 50,
+    //"exec": "bash ~/.config/hypr/scripts/caway",
     "exec": "playerctl -p spotify metadata --format '{\"text\": \"{{artist}} : {{markup_escape(title)}}\", \"tooltip\": \"Spotify : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
     "on-click-middle": "playerctl -p spotify play-pause",
     "on-click": "playerctl -p spotify previous",
     "on-click-right": "playerctl -p spotify next",
     "tooltip": false
 },
+
+
+"custom/cava": {
+  "format": "{}",
+  "exec": "bash ~/.config/hypr/scripts/cava.sh"
+},
+
+
+"group/music": {
+  "orientation": "inherit",
+  "drawer": {
+    "transition-duration": 300,
+    "transition-left-to-right": true
+  },
+  "modules": ["custom/arrow-right", "custom/cava"]
+},
+
+
+
 
 "custom/icon": {
   "format": "󰣇"

@@ -54,20 +54,21 @@ configuration {
 window {
     /* properties for window widget */
     transparency:                "real";
-    location:                    center;
-    anchor:                      center;
+    location:                    northwest;  
+    anchor:                      northwest;  
     fullscreen:                  false;
-    width:                       500px;
-    height:                      200px;
-    x-offset:                    0px;
-    y-offset:                    0px;
+    width:                       310px;
+    x-offset:                    19px;   /* Ajusta x-offset según necesites para una separación */
+    y-offset:                    54px;
+    height:                      400px;
+
 
     /* properties for all widgets */
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
     border:                      2px solid;
-    border-radius:               24px;
+    border-radius:               0px;
     border-color:                @border-colour;
     cursor:                      "default";
     /* Backgroud Colors */

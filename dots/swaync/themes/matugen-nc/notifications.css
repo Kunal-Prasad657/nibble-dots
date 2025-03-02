@@ -29,9 +29,9 @@
 }
 
 .floating-notifications.background .notification-row .notification-background {
-  background: @background;
+  background: @surface_container_lowest;
   border: 2px solid @selected;
-  border-radius: 24px;
+  border-radius: 0px;
   margin: 16px;
   padding: 0;
 }
@@ -67,7 +67,7 @@
 
 .floating-notifications.background .notification-row .notification-background .notification > *:last-child > * .notification-action:active {
   background-color: @selected;
-  color: @background;
+  color: @surface_container_lowest;
 }
 
 .image {
@@ -93,12 +93,12 @@
 
 .floating-notifications.background .notification-row .notification-background .close-button:hover {
   background-color: @selected;
-  color: @background;
+  color: @surface_container_lowest;
 }
 
 .floating-notifications.background .notification-row .notification-background .close-button:active {
   background-color: @selected;
-  color: @background;
+  color: @surface_container_lowest;
 }
 
 .notification.critical progress {

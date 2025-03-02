@@ -39,8 +39,8 @@ input_path = "~/.config/matugen/templates/matugen-rofi.rasi"
 output_path = "~/.config/rofi/matugen/matugen-rofi.rasi"
 
 [templates.hyprland]
-input_path = "~/.config/matugen/templates/matugen-hyprland.conf"
-output_path = "~/.config/hypr/matugen/matugen-hyprland.conf"
+input_path = "~/.config/Ax-Shell/config/matugen/templates/hyprland-colors.conf"
+output_path = "~/.config/Ax-Shell/config/hypr/colors.conf"
 
 [templates.hyprlock]
 input_path = "~/.config/matugen/templates/matugen-hyprlock.conf"
@@ -59,6 +59,7 @@ post_hook = "swaync-client -rs"
 [templates.vesktop]
 input_path = "~/.config/matugen/templates/discord-matugen.css"
 output_path = "~/.config/vesktop/themes/discord-matugen.css"
+post_hook = "vesktop reload"
 
 [templates.gtk3]
 input_path = "~/.config/matugen/templates/matugen-gtk.css"
@@ -83,3 +84,8 @@ output_path = "~/.config/cava/config"
 [templates.neovim]
 input_path = "~/.config/matugen/templates/matugen-colors.vim"
 output_path = "~/.cache/wal/colors-wal.vim"
+
+[templates.ax-shell]
+input_path = "~/.config/Ax-Shell/config/matugen/templates/ax-shell.css"
+output_path = "~/.config/Ax-Shell/styles/colors.css"
+post_hook = "fabric-cli exec ax-shell 'app.set_css()' &"
