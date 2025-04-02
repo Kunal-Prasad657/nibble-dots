@@ -6,6 +6,7 @@
     "rewrite": {
       "^.*( — Zen Browser|Zen Browser)$": "󰈹 Zen",
       "^.*( — Firefox|Firefox)$": "󰈹 Firefox",
+       "^.*( — Brave|Brave)$": " Brave",      
       "^.*( — Chromium|Chromium)$": "󰈹 Chromium",
       "^.*v( .*|$)": " Neovim",
       "^.*~$": "󰄛 Kitty",
@@ -21,7 +22,7 @@
       "transition-duration": 300,
       "transition-right-to-left": true
     },
-    "modules": ["custom/arrow-left", "custom/playerlabel","group/music", "custom/updates"]
+    "modules": ["custom/arrow-left", "custom/playerlabel","custom/updates"] // ,"group/music"]
   },
   "custom/arrow-right": {
     "format": "󰁙",
@@ -50,6 +51,7 @@
     "on-click": "activate",
     "all-outputs": true,
     "format-icons": {
+      
       "1": "",
       "2": "󰖟",
       "3": "󰅩",
@@ -60,6 +62,21 @@
       "8": "󰕧",
       "9": "",
       "10": "󰙯"
+      
+
+      /*
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+      "7": "七",
+      "8": "八",
+      "9": "九",
+      "10": "十" 
+      */
+
     }
   },
   "group/control-center": {
@@ -336,12 +353,17 @@
     "format": "{}",
     "return-type": "json",
     "max-length": 50,
-    //"exec": "bash ~/.config/hypr/scripts/caway",
     "exec": "playerctl -p spotify metadata --format '{\"text\": \"{{artist}} : {{markup_escape(title)}}\", \"tooltip\": \"Spotify : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
-    "on-click-middle": "playerctl -p spotify play-pause",
-    "on-click": "playerctl -p spotify previous",
-    "on-click-right": "playerctl -p spotify next",
+    
+    // "exec": "bash -c 'player=$(playerctl -l | grep -E \"Spotify|cider\" | head -n 1); playerctl -p \"$player\" metadata --format \"{\\\"text\\\": \\\"{{artist}} : {{markup_escape(title)}}\\\", \\\"tooltip\\\": \\\"$player : {{markup_escape(title)}}\\\", \\\"alt\\\": \\\"{{status}}\\\", \\\"class\\\": \\\"{{status}}\\\"}\" -F'",
+
+
+    "on-click-middle": "bash -c 'player=$(playerctl -l | grep -E \"spotify|cider\" | head -n 1); playerctl -p \"$player\" play-pause'",
+    "on-click": "bash -c 'player=$(playerctl -l | grep -E \"spotify|cider\" | head -n 1); playerctl -p \"$player\" previous'",
+    "on-click-right": "bash -c 'player=$(playerctl -l | grep -E \"spotify|cider\" | head -n 1); playerctl -p \"$player\" next'",
+
     "tooltip": false
+
 },
 
 

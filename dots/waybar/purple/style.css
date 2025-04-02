@@ -10,6 +10,7 @@
 
 window#waybar {
   background: alpha(black, 1);
+  /* background: alpha(@surface_container_lowest, 1); */
   border-bottom: 0px solid alpha(@on_surface, 0.5);
 }
 
@@ -87,7 +88,7 @@ tooltip label {
 
 
 #workspaces button {
-  padding: 0px 4px;
+  padding: 0px 4px 0px 4px;
   margin: 0px 4px;
   color: alpha(@on_secondary_container, 0.5);
 
