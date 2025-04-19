@@ -14,9 +14,9 @@ install_packages_yay=(
     waybar
     hyprshot
     hyprpicker
-    grim
-    slurp
-    nautilus
+    # grim
+    # slurp
+    # nautilus
     pamixer
     pavucontrol
     brightnessctl
@@ -24,32 +24,29 @@ install_packages_yay=(
     lsd
     zsh-syntax-highlighting
     zsh-autosuggestions
-    neovim
+    #neovim
     wget
     unzip
     gtk3
     imagemagick
     rust
-    zen-browser-bin
-    wf-recorder
+    # zen-browser-bin
+    # wf-recorder
     rofi
     swww
-    vesktop
+    #vesktop
     cliphist
     keyd
     ttf-jetbrains-mono-nerd
-    hyprpicker
     rofi-calc
     rofimoji
     tmux
     adwaita-colors-icon-theme
-    spicetify-cli
     swaync-git
     swaync-widgets-git
     gnome-tweaks
     python-pywal
     matugen-bin
-    mpv
 )
 
 # Installation log file

@@ -2,7 +2,7 @@
     "output":"eDP-1",
     "layer": "top",
     "position": "top",
-    "margin": "0 0 0 0",
+    "margin": "5 3 2 3",
     "fixed-center": true,
     "reload_style_on_change": true,
     "include": ["~/.config/waybar/purple/modules.jsonc"],
@@ -17,7 +17,7 @@
     "modules-center": [
       "group/info",
       "hyprland/workspaces",
-      "group/hub"
+      "group/utils"
       
     ],
   

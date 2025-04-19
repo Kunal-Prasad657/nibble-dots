@@ -46,8 +46,8 @@ configuration {
 window {
     /* properties for window widget */
     transparency:                "real";
-    location:                    northwest;  
-    anchor:                      northwest;  
+    location:                    center;  
+    anchor:                      center;  
     fullscreen:                  false;
     width:                       310px;
     x-offset:                    19px;   /* Ajusta x-offset según necesites para una separación */
@@ -58,7 +58,7 @@ window {
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               0px;
+    border-radius:               8px;
     border-color:                @border-colour;
     cursor:                      "default";
     /* Backgroud Colors */
@@ -81,7 +81,7 @@ mainbox {
     margin:                      0px;
     padding:                     30px;
     border:                      2px solid;
-    border-radius:               0px;
+    border-radius:               8px;
     border-color:                @border-colour;
     background-color:            transparent;
     children:                    [ "inputbar", "message", "listview" ];
@@ -185,7 +185,7 @@ element {
     margin:                      0px;
     padding:                     5px 10px;
     border:                      0px solid;
-    border-radius:               0px;
+    border-radius:               8px;
     border-color:                @border-colour;
     background-color:            transparent;
     text-color:                  @foreground-colour;
@@ -249,7 +249,7 @@ mode-switcher{
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               0px;
+    border-radius:               8px;
     border-color:                @border-colour;
     background-color:            transparent;
     text-color:                  @foreground-colour;
