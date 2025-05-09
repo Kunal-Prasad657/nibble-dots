@@ -2,9 +2,9 @@
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Enable Powerlevel10k instant prompt. Should stay at the top of ~/.zshrc.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+#fi
 
 # Set up the prompt
 
@@ -68,6 +68,7 @@ alias gs='git status'
 alias ga='git add'
 alias gf='git fetch'
 alias nv='nvim'
+alias cd='z'
 alias remove='sudo pacman -Rns $(pacman -Qtdq)'
 
 alias fetch='fastfetch -c /home/dam/.config/fastfetch/presets/nyarch.jsonc'
@@ -136,3 +137,7 @@ export PATH=$PATH:/home/dam/.spicetify
 ## Completion scripts setup. Remove the following line to uninstall
 [[ -f /home/dam/.config/.dart-cli-completion/zsh-config.zsh ]] && . /home/dam/.config/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
+
+eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/catppuccin_mocha.omp.json)"
+
+eval "$(zoxide init zsh)"

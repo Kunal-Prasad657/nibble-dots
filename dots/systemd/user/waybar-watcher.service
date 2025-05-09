@@ -1,0 +1,13 @@
+[Unit]
+Description=Waybar Watcher for Hyprland
+After=hyprland-session.target
+PartOf=graphical-session.target
+
+[Service]
+ExecStart=%h/.local/waybar-watcher
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
+

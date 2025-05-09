@@ -17,8 +17,8 @@
  /* =======  Contenedor principal  ======= */
  window#waybar {
    background: alpha(@surface_container_lowest, 1);
-   border: 1.4px solid alpha(@on_secondary_container, 0.7);
-   border-radius: 8px;                     /* contorno ligeramente menor */
+   border: 2px solid alpha(@on_secondary_container, 0.25);
+   border-radius: 0px;                     /* contorno ligeramente menor */
  }
  
  /* =======  Tooltip  ======= */
@@ -43,7 +43,7 @@
  #custom-arrow-right,
  #custom-arrow-left {
    margin: 0px 4px 2px 4px;               
-   color: alpha(@on_surface, .3);
+   color: alpha(@on_secondary_container, .3);
  }
  
  /* =======  Grupos estándar (CPU, RAM, etc.)  ======= */
@@ -91,7 +91,7 @@
    font-size: 20px;
    margin: 0 4px;
    padding: 0 0px;
-   color: alpha(@on_secondary_container, 0.2);
+   color: alpha(@on_secondary_container, 0.25);
    border-radius: 10px;
  }
  
@@ -116,7 +116,7 @@
    margin: 0 4px;
    padding: 0 4px;
    background: alpha(@surface_container_highest, 0);
-   color: alpha(@primary, 1);
+   color: @on_tertiary_container;
    border-radius: 10px;
  }
  
