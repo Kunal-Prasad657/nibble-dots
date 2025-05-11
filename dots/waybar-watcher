@@ -1,0 +1,39 @@
+#!/bin/bash
+
+DEBUG=false   # Cambia a "false" para desactivar logs
+last_state="visible"
+
+log() {
+    if [ "$DEBUG" = true ]; then
+        echo "$1"
+    fi
+}
+
+while true; do
+    # Obtener el workspace actual
+    current_workspace=$(hyprctl activeworkspace -j | jq -r '.id')
+    log "[INFO] Workspace actual: $current_workspace"
+
+    # Contar cuántos clientes están en ese workspace
+    window_count=$(hyprctl clients -j | jq "[.[] | select(.workspace != null and .workspace.id == ${current_workspace})] | length")
+    log "[INFO] Ventanas en el workspace actual: $window_count"
+
+    log "[DEBUG] Último estado: $last_state"
+
+    # Lógica para mostrar u ocultar Waybar
+    if [ "$window_count" -eq 0 ] && [ "$last_state" != "hidden" ]; then
+        log "[ACTION] Ocultando Waybar (no hay ventanas)"
+        killall -SIGUSR1 waybar
+        last_state="hidden"
+    elif [ "$window_count" -gt 0 ] && [ "$last_state" != "visible" ]; then
+        log "[ACTION] Mostrando Waybar (ventanas presentes)"
+        killall -SIGUSR1 waybar
+        last_state="visible"
+    else
+        log "[DEBUG] No se requiere acción"
+    fi
+
+    log "----------------------------------------"
+    sleep 0.6
+done
+
