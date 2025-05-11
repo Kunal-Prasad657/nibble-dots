@@ -3,7 +3,7 @@
 ## Script para copiar múltiples archivos desde diferentes orígenes a destinos específicos
 ## con un solo botón "Copiar" usando Rofi
 
-swww img ~/wallpapers/purple.jpg
+swww img ~/wallpapers/mocha52.jpg
 
 #spicetify config current_theme catppuccin
 #spicetify config color_scheme mocha
@@ -35,15 +35,15 @@ build_message() {
 
 # Mostrar botón de acción con resumen de archivos
 run_menu() {
-    echo "🚀 Copiar todos" | rofi -dmenu \
-        -p "Aplicar configuración de temas" \
+    echo "🚀 Copy all" | rofi -dmenu \
+        -p "Apply" \
         -mesg "$(build_message)" \
         -theme "$rofi_theme"
 }
 
 # Notificación al sistema
 notify() {
-    notify-send "🎨 Archivos copiados" "$1"
+    notify-send "🎨 Copied files" "$1"
 }
 
 # Ejecutar copias
@@ -65,17 +65,17 @@ copy_all() {
             cp "$src" "$dst"
             ((success++))
         else
-            echo "❌ No encontrado: $src"
+            echo "❌ Not found: $src"
             ((failed++))
         fi
     done
 
-    notify "✅ Copiados: $success | ❌ Fallidos: $failed"
+    notify "✅ Copied: $success | ❌ Failed: $failed"
 }
 
 # Mostrar menú y ejecutar si se selecciona
 selected=$(run_menu)
 
-if [[ "$selected" == "🚀 Copiar todos" ]]; then
+if [[ "$selected" == "🚀 Copy all" ]]; then
     copy_all
 fi

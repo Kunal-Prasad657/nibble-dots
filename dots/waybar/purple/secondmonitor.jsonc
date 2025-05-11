@@ -1,8 +1,8 @@
 {
     "output":"eDP-1",
-    "layer": "top",
-    "position": "top",
-    "margin": "5 3 2 3",
+    "layer": "bottom",
+    "position": "bottom",
+    "margin": "0 270 4 270",
     "fixed-center": true,
     "reload_style_on_change": true,
     "include": ["~/.config/waybar/purple/modules.jsonc"],

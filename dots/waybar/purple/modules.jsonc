@@ -2,7 +2,9 @@
 
 {
   "hyprland/window": {
-    "format": "󰣆 {title}",
+    "format": "",
+
+    "format-alt": "{title}",
     "max-length": 80,
     "separate-outputs": false,
     "rewrite": {
@@ -102,7 +104,7 @@
     "drawer": { "transition-duration": 300, "transition-left-to-right": true },
     "modules": [
       "custom/arrow-right",
-      "wlr/taskbar",
+      // "wlr/taskbar",
       "cpu",
       "memory",
       "disk"
@@ -134,7 +136,7 @@
 
   "group/connection": {
     "orientation": "inherit",
-    "modules": ["group/bluetooth", "group/network"]
+    "modules": ["group/network"]
   },
 
   "group/network": {

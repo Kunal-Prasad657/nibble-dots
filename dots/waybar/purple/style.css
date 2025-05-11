@@ -113,7 +113,7 @@
  #pulseaudio,
  #network,
  #bluetooth {
-   margin: 0 4px;
+   margin: 0 2px;
    padding: 0 4px;
    background: alpha(@surface_container_highest, 0);
    color: @on_tertiary_container;
