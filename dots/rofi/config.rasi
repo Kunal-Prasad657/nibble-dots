@@ -46,11 +46,12 @@ configuration {
 window {
     /* properties for window widget */
     transparency:                "real";
-    location:                    center;  
-    anchor:                      center;  
+    location:                    west;  
+    anchor:                      west;  
     fullscreen:                  false;
-    width:                       310px;
-    x-offset:                    0px;   /* Ajusta x-offset según necesites para una separación */
+    width:                       300px;
+    height:                      600px;
+    x-offset:                    50px;   /* Ajusta x-offset según necesites para una separación */
     y-offset:                    0px;
 
     /* properties for all widgets */

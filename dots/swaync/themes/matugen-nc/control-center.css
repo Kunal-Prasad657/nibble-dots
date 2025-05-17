@@ -34,21 +34,19 @@
 /* CONTROL CENTER ------------------------------------------------------------------------ */
 
 .control-center {
-  background: @surface_container_lowest;
-  border-radius: 0px;
-  border: 2px solid @selected;
-  box-shadow: 0 0 10px 0 rgba(0,0,0,.6);
-  margin: 18px;
+  background: @background;
+  border-radius: 2px;
+  border: 2px solid alpha(@on_secondary_container, 0.25);
+  margin: 16px;
+  margin-left: 4px;
   padding: 12px;
 }
 
 /* Notifications  */
 .control-center .notification-row .notification-background,
 .control-center .notification-row .notification-background .notification.critical {
-  background-color: alpha(@primary, 0.8);
-  color: @on_primary;
-  border: 2px solid @surface_container_lowest;
-  border-radius: 16px;
+  background-color: alpha(@secondary_container, 1);
+  border-radius: 2px;
   margin: 4px 0px;
   padding: 4px;
 }
@@ -69,7 +67,7 @@
 .control-center .notification-row .notification-background .notification > *:last-child > * .notification-action {
   background: alpha(@selected, .6);
   color: @text;
-  border-radius: 12px;
+  border-radius: 2px;
   margin: 6px;
 }
 
@@ -85,7 +83,7 @@
 
 .control-center .notification-row .notification-background .close-button {
   background: transparent;
-  border-radius: 6px;
+  border-radius: 2px;
   color: @text;
   margin: 0px;
   padding: 4px;
@@ -123,7 +121,7 @@
   background: transparent;
   color: @text;
   margin: 4px; 
-  border-radius: 6px;
+  border-radius: 2px;
   padding: 4px;
 }
 
@@ -148,7 +146,7 @@
 
 .widget-title button {
   background: @background-alt;
-  border-radius: 6px;
+  border-radius: 2px;
   padding: 4px 16px;
 }
 
@@ -170,7 +168,7 @@
 .widget-dnd > switch {
   background: @background-alt;
   font-size: initial;
-  border-radius: 8px;
+  border-radius: 2px;
   box-shadow: none;
   padding: 2px;
 }
@@ -189,7 +187,7 @@
 
 .widget-dnd > switch slider {
   background: @text;
-  border-radius: 6px;
+  border-radius: 2px;
 }
 
   /* Buttons menu */
@@ -197,7 +195,7 @@
   font-size: x-large;
   padding: 6px 2px;
   margin: 6px;
-  border-radius: 12px;
+  border-radius: 2px;
   background: @background-alt;
   color: @text;
 }
@@ -206,7 +204,7 @@
   margin: 4px 10px;
   padding: 6px 12px;
   background: transparent;
-  border-radius: 8px;
+  border-radius: 2px;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button:hover {
@@ -221,66 +219,26 @@
     color: @text-alt;
 }
 
-/* Music player */
-.widget-mpris {
-    background: alpha(@selected, .2);
-    border-radius: 16px;
-    color: @text-alt;
-    padding: 6px;
-    margin:  20px 6px;
-}
- 
-.widget-mpris button {
-  color: alpha(@text-alt, .9);
-  border-radius: 6px;
-}
-
-.widget-mpris button:hover {
-  color: @text;
-}
-
-  /* NOTE: Background need *opacity 1* otherwise will turn into the album art blurred  */
-.widget-mpris-player {
-    background: @accent;
-    padding: 6px 10px;
-    margin: 10px;
-    border-radius: 14px;
-}
-
-.widget-mpris-album-art {
-  border-radius: 16px;
-}
- 
-.widget-mpris-title {
-    font-weight: 700;
-    font-size: 1rem;
-}
- 
-.widget-mpris-subtitle {
-    font-weight: 500;
-    font-size: 0.8rem;
-}
-
 
 
 /* Volume & Backlight Widget */
 progressbar,
 progress,
 trough {
-    border-radius: 20px;
+    border-radius: 2px;
     background: transparent;
 }
 
 trough highlight {
     padding: 4px;
     background: @selected;
-    border-radius: 20px;
+    border-radius: 2px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
 }
 trough highlight:hover {
     padding: 4px;
     background: @selected;
-    border-radius: 20px;
+    border-radius: 2px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
 }
 
@@ -298,7 +256,7 @@ trough slider:hover {
   color: @text;
   padding: 4px;
   margin: 6px;
-  border-radius: 6px;
+  border-radius: 2px;
 }
 
 .widget-backlight {
@@ -306,5 +264,50 @@ trough slider:hover {
   color: @text;
   padding: 4px;
   margin: 6px;
-  border-radius: 6px;
+  border-radius: 2px;
 }
+
+/* Music player */
+.widget-mpris {
+    background: alpha(@secondary_container, 1);
+    border-radius: 4px;
+    color: @text-alt;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin:  20px 6px;
+}
+ 
+.widget-mpris button {
+  color: alpha(@on_secondary_container, 1);
+  border-radius: 2px;
+}
+
+.widget-mpris button:hover {
+  color: @on_secondary_container;
+}
+
+  /* NOTE: Background need *opacity 1* otherwise will turn into the album art blurred  */
+.widget-mpris-player {
+    background: alpha(@secondary_container, 1);
+    padding: 6px 10px;
+    margin: 10px;
+    border-radius: 2px;
+}
+
+.widget-mpris-album-art {
+  border-radius: 2px;
+}
+ 
+.widget-mpris-title {
+    font-weight: 700;
+    font-size: 1rem;
+    color: @on_secondary_container; 
+}
+ 
+.widget-mpris-subtitle {
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: @on_secondary_container;
+}
+
+

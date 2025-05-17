@@ -47,6 +47,9 @@ configuration {
 
 /* Main Window ------------------------------------------------ */
 window {
+    location:                    west;
+    anchor:                      west;
+    x-offset:                    50px;
     fullscreen:                  false;
     transparency:                "real";
     cursor:                      "default";
@@ -55,8 +58,8 @@ window {
     border-color:				 @selected;
     border-radius:               0px;
     border-color:                @border-color;
-    width:                       50%;
-    height:                      50%;
+    width:                       30%;
+    height:                      70%;
     margin:                      0px;
     padding:                     0px;
 }

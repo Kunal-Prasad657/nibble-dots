@@ -2,7 +2,7 @@
     "output":"HDMI-A-1",
     "layer": "bottom",
     "position": "bottom",
-    "margin": "0 500 4 500",
+    "margin": "0 500 2 500",
     "fixed-center": true,
     "reload_style_on_change": true,
     "name": "overlay",
@@ -13,19 +13,37 @@
     "modules-left": [
       "hyprland/window",
       "group/apps"
+
+      //"custom/playerlabel"
+
+
+
+    
+      
       
     ],
     
     "modules-center": [
+      //"memory",
+      //"custom/updates",
+
+
       "group/info",
       "hyprland/workspaces",
       "group/utils"
-      
+
+      //"tray",
+      //"custom/notifications"
     ],
   
     "modules-right": [
-      //"group/control-center",
       "group/video",
+
+      
+      //"group/audio",
+      //"group/connection"),
+
+      
       "clock",
       "group/power"
     ]

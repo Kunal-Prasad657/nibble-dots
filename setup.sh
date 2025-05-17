@@ -15,7 +15,7 @@ install_packages_yay=(
     hyprshot
     hyprpicker
     # grim
-    # slurp
+    slurp
     # nautilus
     pamixer
     pavucontrol
@@ -47,6 +47,8 @@ install_packages_yay=(
     gnome-tweaks
     python-pywal
     matugen-bin
+    hypr-zoom
+    zoxide
 )
 
 # Installation log file

@@ -31,11 +31,18 @@
 
 .floating-notifications.background .notification-row .notification-background {
   background: @surface_container_lowest;
-  border: 2px solid @selected;
+  border: 2px solid alpha(@on_secondary_container, 0.25);
   border-radius: 0px;
-  margin: 16px;
+  margin-top: 3px;
+  margin-left: 9px;
   padding: 0;
 }
+
+
+
+
+
+
 
 .floating-notifications.background .notification-row .notification-background .notification {
   padding: 6px;
@@ -109,5 +116,10 @@
 .notification.low progress,
 .notification.normal progress {
   background-color: @selected;
+}
+
+.floating-notifications.background {
+    padding-top: 120px;
+    background-color: transparent;
 }
 
