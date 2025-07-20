@@ -1,8 +1,8 @@
 
 # 
 
-<img src="https://github.com/notdanna/hypr.pro/blob/main/assets/r.png?raw=true" width="100%">
-<img src="https://github.com/notdanna/hypr.pro/blob/main/assets/task.png?raw=true" width="100%">
+<img src="https://github.com/Kunal-Prasad657/nibble-dots/blob/main/assets/r.png?raw=true" width="100%">
+<img src="https://github.com/Kunal-Prasad657/nibble-dots/blob/main/assets/task.png?raw=true" width="100%">
 
 
 ## Introduction
