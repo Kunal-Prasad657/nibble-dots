@@ -18,6 +18,7 @@ fi
 
 # Array de paquetes para Arch (usados con Yay)
 install_packages_yay=(
+    ghostty
     kitty
     hyprland
     waybar
@@ -59,10 +60,13 @@ install_packages_yay=(
     python-pywal
     matugen-bin
     mpv
+    blueman
+    NetworkManager
 )
 
 # Array de paquetes para Fedora (solo los disponibles oficialmente)
 install_packages_dnf=(
+    ghostty
     kitty
     waybar
     grim
@@ -87,6 +91,8 @@ install_packages_dnf=(
     gnome-tweaks
     pywal
     mpv
+    blueman
+    NetworkManager
 )
 
 # Archivo de log de instalación
@@ -257,7 +263,7 @@ function copia() {
     sudo usermod --shell /usr/bin/zsh root > /dev/null 2>&1
     cp -r "$1/dots/.zshrc" "$HOME/"
     sudo ln -s -f "$HOME/.zshrc" "/root/.zshrc"
-
+    
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k > /dev/null 2>&1
     sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /root/powerlevel10k > /dev/null 2>&1
     cp -r "$1/dots/powerlevel10k/user/.p10k.zsh" "$HOME/"
@@ -273,6 +279,9 @@ function copia() {
     if [[ "$KEYDANS" =~ ^[Yy]$ ]]; then
         sudo cp -r "$1/dots/default.conf" /etc/keyd/
     fi
+    systemctl enable --now bluetooth.service
+    systemctl enable --now NetworkManager.service
+    systemctl enable --now NetworkManager-wait-online.service
 
     spicetify config current_theme catppuccin
     spicetify config color_scheme mocha

@@ -71,7 +71,7 @@ alias nv='nvim'
 alias cd='z'
 alias remove='sudo pacman -Rns $(pacman -Qtdq)'
 
-alias fetch='fastfetch -c /home/dam/.config/fastfetch/presets/nyarch.jsonc'
+alias fetch='fastfetch -c ~/.config/fastfetch/presets/nyarch.jsonc'
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -131,13 +131,21 @@ bindkey "^[[3~" delete-char
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 
-export PATH=$PATH:/home/dam/.spicetify
+export PATH=$PATH:~/.spicetify
 
-## [Completion]
-## Completion scripts setup. Remove the following line to uninstall
-[[ -f /home/dam/.config/.dart-cli-completion/zsh-config.zsh ]] && . /home/dam/.config/.dart-cli-completion/zsh-config.zsh || true
-## [/Completion]
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/catppuccin_mocha.omp.json)"
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
+# Path to your Oh My Zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time Oh My Zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="powerlevel10k/powerlevel10k"
 eval "$(zoxide init zsh)"

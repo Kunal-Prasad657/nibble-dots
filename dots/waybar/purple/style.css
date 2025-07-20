@@ -17,7 +17,7 @@
  /* =======  Contenedor principal  ======= */
  window#waybar {
    background: alpha(@surface_container_lowest, 1);
-   border: 2px solid alpha(@on_secondary_container, 0.25);
+   border: 0px solid alpha(@on_secondary_container, 0.25);
    border-radius: 0px;                     /* contorno ligeramente menor */
  }
  

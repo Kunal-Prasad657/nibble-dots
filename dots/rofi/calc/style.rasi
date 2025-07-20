@@ -211,8 +211,8 @@ element normal.active {
     text-color:                  var(active-foreground);
 }
 element selected.normal {
-    background-color:            var(background);
-    text-color:                  var(selected);
+    background-color:            var(selected);
+    text-color:                  var(background);
 }
 element selected.urgent {
     background-color:            var(selected-urgent-background);

@@ -15,25 +15,9 @@ theme="$HOME/.config/rofi/wallpaper/style.rasi"
 # --- Selector de esquema matugen (antes de elegir wallpaper) ---
 SCHEMES=(
     "ninguno"
-    "scheme-content"
-    "scheme-expressive"
-    "scheme-fidelity"
-    "scheme-fruit-salad"
-    "scheme-monochrome"
-    "scheme-neutral"
-    "scheme-rainbow"
-    "scheme-tonal-spot"
+    
 )
 
-# Mostrar menú rofi para escoger esquema
-scheme_choice=$(printf "%s\n" "${SCHEMES[@]}" | rofi -dmenu -i -p "󰙘 Esquema de color" -lines ${#SCHEMES[@]} -width 20 -location 1 -yoffset 0)
-
-# Definir el comando matugen según la opción seleccionada
-if [[ "$scheme_choice" != "ninguno" && -n "$scheme_choice" ]]; then
-    APPLY_SCHEME="matugen -t $scheme_choice image"
-else
-    APPLY_SCHEME="matugen image"
-fi
 
 # --- Selección del wallpaper ---
 ROFI_CMD="rofi -dmenu -i -show-icons -theme-str $(build_theme 3 5 6) -theme ${theme}"

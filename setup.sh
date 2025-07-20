@@ -10,6 +10,7 @@
 # List of packages to install with Yay
 install_packages_yay=(
     kitty
+    ghostty
     hyprland
     waybar
     hyprshot
@@ -49,6 +50,8 @@ install_packages_yay=(
     matugen-bin
     hypr-zoom
     zoxide
+    blueman
+    NetworkManager
 )
 
 # Installation log file
@@ -57,14 +60,13 @@ INSTLOG="install.log"
 function present() {
     # Array of characters to animate
     local array=(
-        "\040b"
-        "y\040"
-        "d"
-        "a"
-        "n"
-        "n"
-        "a"
+        "h"
+        "e"
         "l"
+        "l"
+        "o"
+        "w"
+        
         "^"
         "^\n"
     )
@@ -206,6 +208,20 @@ function copia() {
     mkdir -p "$HOME/.config/waybar" > /dev/null 2>&1
     cp -r "$1/dots/waybar/"* "$HOME/.config/waybar/"
 
+    mkdir -p "$HOME/.config/cava" > /dev/null 2>&1
+    cp -r "$1/dots/cava/"* "$HOME/.config/cava/"
+
+    mkdir -p "$HOME/.config/swaync" > /dev/null 2>&1
+    cp -r "$1/dots/swaync/"* "$HOME/.config/swaync/"
+    
+    mkdir -p "$HOME/.config/swaync-widgets" > /dev/null 2>&1
+    cp -r "$1/dots/swaync-widgets/"* "$HOME/.config/swaync-widgets/"
+    
+    mkdir -p "$HOME/.config/ghostty" > /dev/null 2>&1
+    cp -r "$1/dots/ghostty/"* "$HOME/.config/ghostty/"
+    
+    
+
     # Change shell to ZSH for the current user and root
     sudo usermod --shell /usr/bin/zsh "$USER" > /dev/null 2>&1
     sudo usermod --shell /usr/bin/zsh root > /dev/null 2>&1
@@ -224,7 +240,7 @@ function copia() {
     sudo chown "$USER":"$USER" zsh-sudo/
     cd zsh-sudo || exit 1
     sudo cp -r "$1/dots/sudo.plugin.zsh" /usr/share/zsh-sudo/
-
+    
 
 
     # ...existing code...
@@ -236,11 +252,14 @@ function copia() {
     # ...existing code...
 
     # spiceify configuration
+    systemctl enable --now bluetooth.service
+    systemctl enable --now NetworkManager.service
+    systemctl enable --now NetworkManager-wait-online.service
+    
     spicetify config current_theme catppuccin
     spicetify config color_scheme mocha
     spicetify config inject_css 1 inject_theme_js 1 replace_colors 1 overwrite_assets 1
     spicetify apply
-
 
     echo -en "\e[32mOK\e[0m\n"
 }
@@ -278,7 +297,7 @@ if [ "$(whoami)" != "root" ]; then
 
     if [[ "$CONTINST" == "Y" || "$CONTINST" == "y" || "$CONTINST" == "yes" ]]; then
         echo -en "\n"
-        echo -en "\e[33m[x] Installing >.<...\e[0m\n"
+        echo -en "\e[33m[x] Installing ...\e[0m\n"
         sudo touch /tmp/hyprv.tmp
         call
     else

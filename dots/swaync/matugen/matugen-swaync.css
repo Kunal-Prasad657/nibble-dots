@@ -7,7 +7,6 @@
 
 
 
-
 /*-----All Colors--------*/
 
 @define-color background #121318;
@@ -60,7 +59,7 @@
 
 @define-color outline_variant #46464f;
 
-@define-color primary #bbc3ff;
+@define-color primary   #ECAA49;
 
 @define-color primary_container #3a4379;
 

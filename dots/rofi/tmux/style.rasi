@@ -53,12 +53,12 @@ configuration {
 window {
     /* properties for window widget */
     transparency:                "real";
-    location:                    west;  
-    anchor:                      west;  
+    location:                    northeast;  
+    anchor:                      northeast;  
     fullscreen:                  false;
-    width:                       310px;
-    x-offset:                    50px;   /* Ajusta x-offset según necesites para una separación */
-    y-offset:                    0px;
+    width:                       350px;
+    x-offset:                    -19px;   /* Ajusta x-offset según necesites para una separación */
+    y-offset:                    54px;
     height:                      400px;
 
     /* properties for all widgets */
@@ -157,7 +157,6 @@ case-indicator {
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       5;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   true;
@@ -209,8 +208,8 @@ element normal.active {
     text-color:                  var(active-foreground);
 }
 element selected.normal {
-    background-color:            var(background);
-    text-color:                  var(selected);
+    background-color:            var(selected);
+    text-color:                  var(background);
 }
 element selected.urgent {
     background-color:            var(selected-urgent-background);
