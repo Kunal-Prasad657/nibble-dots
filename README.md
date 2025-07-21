@@ -1,9 +1,10 @@
 
 # 
 
+<img src="https://github.com/Kunal-Prasad657/nibble-dots/blob/main/assets/2025-07-20-190200_hyprshot.png?raw=true" width="100%">
+<img src="https://github.com/Kunal-Prasad657/nibble-dots/blob/main/assets/2025-07-21-203829_hyprshot.png?raw=true" width="100%">
 <img src="https://github.com/Kunal-Prasad657/nibble-dots/blob/main/assets/r.png?raw=true" width="100%">
 <img src="https://github.com/Kunal-Prasad657/nibble-dots/blob/main/assets/task.png?raw=true" width="100%">
-
 
 ## Introduction
 
@@ -98,7 +99,8 @@ sudo systemctl enable emptty.service
 ### 📂 Applications & System
 | Key Combination | Action |
 |----------------|--------|
-| `SUPER + RETURN` | Launch `kitty` terminal |
+| `SUPER + RETURN` | Launch `ghostty` terminal |
+| `SUPER + F1` | Launch `kitty` quick terminal |
 | `SUPER + A` | Open Rofi (`drun`) |
 | `SUPER + E` | Open file manager (`$fileManager`) |
 | `SUPER + ESCAPE` | Suspend system (`systemctl suspend`) |
