@@ -11,8 +11,6 @@
 Welcome, MAte this is a custom Arch Linux configuration file for Hyprland.
 
 
-> **Note**: This is not tested on systems with NVIDIA.
-
 ## Requirements 🛠️
 - **Hyprland** (Wayland)  
 - **Arch Linux** (or Arch-based)  
